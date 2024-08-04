@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <section class="section hero" id="home">
+                <video autoplay muted loop id="background-video">
+                    <source src="./vid1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+            <section class="section gradient-purple">
+                <a href="#" class="logo"></a>
+                <nav>
+                    <a href="#" class="active"><i class="fa fa-home"></i> Home</a>
+                    <a href="#skills"><i class="fa fa-cogs"></i> Skills</a>
+                    <a href="#education"><i class="fa fa-briefcase"></i> Projects</a>
+                    <a href="#contact"><i class="fa fa-envelope"></i> Contact</a>
+                </nav>
+                <section class="home" id="home-section">
+                    <div class="home-img">
+                        <img src="pic.jpeg" alt="Centered Image">
+                    </div>
+                    <div class="home-content">
+                        <h1>Hi, It's <span>VASANTH</span></h1>
+                        <h3 class="typing-text">I'm a <span></span></h3>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/vasanth-g-/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/VIRTUALVASANTH"><i class="fab fa-github"></i></a>
+                            <a href="https://x.com/vasanth_luna"><i class="fab fa-x"></i></a>
+                        </div>
+                        <a href="mailto:vasanth.g.1503@gmail.com" class="btn">Hire me</a>
+                    </div>
+                </section>
+            </section>
+            <section class="section gradient-blue" id="skills">
+                <div class="skills-container">
+                    <div class="skill-section">
+                  <h2>Languages</h2>
+                  <p>C, JavaScript, MySQL, HTML, CSS, Python</p>
+              </div>
+              <div class="skill-section">
+                  <h2>Machine Learning</h2>
+                  <p>PyTorch, scikit-learn, Mediapipe</p>
+              </div>
+              <div class="skill-section">
+                  <h2>Relevant Courses</h2>
+                  <p>Data Structure, Software Engineering, Object oriented Programming, Computer Networks, Database Management System, Operating System</p>
+              </div>
+              <div class="skill-section">
+                  <h2>Developer Tools</h2>
+                  <p>Git, Jupyter Notebook, VS Code</p>
+              </div>
+                </div>
+            </section>
+            <section class="section gradient-green" id="education">
+                <div class="ski-container">
+                <div class="ski-section">
+                    <h3>MY PROJECTS</h3>
+                </div>
+                <div class="skil-section">
+                    <h1>AUTO-BILLING Software</h1>
+                    <p>I developed an advanced automated billing system utilizing Django, which streamlines the billing process efficiently and accurately.</p>
+                </div>
+                <div class="skil-section">
+                    <h1>Warehouse Management System</h1>
+                    <p>I developed an advanced warehouse management system using PHP to optimize inventory tracking and logistics.</p>
+                </div>
+                <div class="skil-section">
+                    <h1>Stock Price Prediction</h1>
+                    <p>I created a stock price prediction model using machine learning algorithms for accurate financial forecasting.</p>
+                </div>
+            </section>
+            <section class="section gradient-red" id="contact">
+                <div class="social-icon">
+                    <h3>CONTACT</h3>
+                    <h1>LinkedIn</h1>
+                    <a href="https://www.linkedin.com/in/vasanth-g-/"><i class="fab fa-linkedin"></i></a>
+                    <p>https://www.linkedin.com/in/vasanth-g-/</p>
+                    <h1>GitHub</h1>
+                    <a href="https://github.com/VIRTUALVASANTH"><i class="fab fa-github"></i> </a>
+                    <p>https://github.com/VIRTUALVASANTH</p>
+                    <h1>Gmail</h1>
+                    <a href="mailto:vasanth.g.1503@gmail.com"><i class="fa fa-envelope"></i> </a>
+                    <p>mailto:vasanth.g.1503@gmail.com</p>
+                    <h1>X</h1>
+                    <a href="https://x.com/vasanth_luna"><i class="fab fa-x"></i> </a>
+                    <p>https://x.com/vasanth_luna</p>
+                </div>
+                <div>
+                    <a href="resume.pdf" target="_blank" class="download-resume"><i class="fa fa-download"></i> Download CV</a></div>
+            </section>
+        </div>
+        
+        <div class="image-container">
+            <img src="./img2.png" alt="image">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="./app.js"></script>
+    <script>
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            if (anchor.getAttribute('href') !== '#') {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
