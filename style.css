@@ -635,43 +635,65 @@ img {
     object-fit: cover;
     z-index: -1;
 }
-.skil-section {
-    background-color: #927b7b   ;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 60px;
+.gradient-green {
+    background-color: #000000;
+    color: #FFFFFF; /* White text color for contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5rem 2rem; /* Increase padding to ensure proper spacing */
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Ensure padding is included in height calculation */
 }
 
-.skil-section h1 {
+.projects-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.project-header h3 {
     font-size: 3rem;
-    color: #000000;
-    margin-bottom: 10px;
+    color: #FFFFFF; /* White text color for contrast */
+    margin-bottom: 1rem;
 }
 
-.skil-section p {
-    font-size: 2rem;
-    color: #000000;
+.project {
+    background-color: #927b7b;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.project h1 {
+    font-size: 2.5rem;
+    color: #000000; /* Black text color for contrast */
+    margin-bottom: 1rem;
+}
+
+.project p {
+    font-size: 1.5rem;
+    color: #000000; /* Black text color for contrast */
     margin: 0;
 }
 
-.ski-section {
-    background-color: #e4d6d6;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 10px;
+@media (max-width: 768px) {
+    .projects-container {
+        padding: 1rem;
+    }
 
-}
+    .project h1 {
+        font-size: 2rem;
+    }
 
-.ski-section h3 {
-    font-size: 3rem;
-    color: #000000;
-    margin-bottom: 10px;
-}
-
-.ski-container {
-    padding: 2rem 2rem 2rem 2rem; /* Increase top padding to move content down */
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 10px; /* Space between skills and next content */
+    .project p {
+        font-size: 1.2rem;
+    }
 }
