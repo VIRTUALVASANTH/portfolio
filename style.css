@@ -589,20 +589,23 @@ img {
     margin-bottom: 20px;
   }
 
-  .download-resume {
-    color: #FFFFFF;
-    padding: 9rem 2rem 2rem 2rem; /* Increase top padding to move content down */
-    font-size: 3rem;
-    align-items: right ;
-    position: absolute;
-    bottom: 720px;
-    right: 10%;
-    transform: translateX(-50%);
-  }
+  .download-resume .download-btn {
+    background-color: #5442db; /* Change this to your desired color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 60px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
 
-  .download-resume i{
-    color: rgb(162, 64, 64);
-  }
+.download-resume .download-btn:hover {
+    background-color: #1E90FF; /* Change this to your desired hover color */
+}
 
 
   .social-icon a {
