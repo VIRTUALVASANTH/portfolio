@@ -19,7 +19,7 @@
             <section class="section gradient-purple">
                 <a href="#" class="logo"></a>
                 <nav>
-                    <a href="#" class="active"><i class="fa fa-home"></i> Home</a>
+                    <a href="#home" class="active"><i class="fa fa-home"></i> Home</a>
                     <a href="#skills"><i class="fa fa-cogs"></i> Skills</a>
                     <a href="#education"><i class="fa fa-briefcase"></i> Projects</a>
                     <a href="#contact"><i class="fa fa-envelope"></i> Contact</a>
@@ -42,22 +42,25 @@
             </section>
             <section class="section gradient-blue" id="skills">
                 <div class="skills-container">
+                    <div class="skill-header">
+                        <h3>MY SKILLS:</h3>
+                    </div>
                     <div class="skill-section">
-                  <h2>Languages</h2>
-                  <p>C, JavaScript, MySQL, HTML, CSS, Python</p>
-              </div>
-              <div class="skill-section">
-                  <h2>Machine Learning</h2>
-                  <p>PyTorch, scikit-learn, Mediapipe</p>
-              </div>
-              <div class="skill-section">
-                  <h2>Relevant Courses</h2>
-                  <p>Data Structure, Software Engineering, Object oriented Programming, Computer Networks, Database Management System, Operating System</p>
-              </div>
-              <div class="skill-section">
-                  <h2>Developer Tools</h2>
-                  <p>Git, Jupyter Notebook, VS Code</p>
-              </div>
+                        <h2>Languages</h2>
+                        <p>C, JavaScript, MySQL, HTML, CSS, Python</p>
+                    </div>
+                    <div class="skill-section">
+                        <h2>Machine Learning</h2>
+                        <p>PyTorch, scikit-learn, Mediapipe</p>
+                    </div>
+                    <div class="skill-section">
+                        <h2>Relevant Courses</h2>
+                        <p>Data Structure, Software Engineering, Object oriented Programming, Computer Networks, Database Management System, Operating System</p>
+                    </div>
+                    <div class="skill-section">
+                        <h2>Developer Tools</h2>
+                        <p>Git, Jupyter Notebook, VS Code</p>
+                    </div>
                 </div>
             </section>
             <section class="section gradient-green" id="education">
@@ -78,10 +81,10 @@
                         <p>I created a stock price prediction model using machine learning algorithms for accurate financial forecasting.</p>
                     </div>
                 </div>
-            </section>            
+            </section>
             <section class="section gradient-red" id="contact">
                 <div class="social-icon">
-                    <h3>CONTACT</h3>
+                    <h3>CONTACT:</h3>
                     <h1>LinkedIn</h1>
                     <a href="https://www.linkedin.com/in/vasanth-g-/"><i class="fab fa-linkedin"></i></a>
                     <p>https://www.linkedin.com/in/vasanth-g-/</p>
@@ -95,14 +98,14 @@
                     <a href="https://x.com/vasanth_luna"><i class="fab fa-x"></i> </a>
                     <p>https://x.com/vasanth_luna</p>
                 </div>
-                <div>
+                <div class="download-container">
                     <a href="resume.pdf" target="_blank" class="download-resume">
-                        <button class="download-btn"><i class="fa fa-download"></i> Download CV</button>
+                        <button class="download-btn">
+                            <i class="fa fa-download"></i> Download CV</button>
                     </a>
                 </div>
             </section>
         </div>
-        
         <div class="image-container">
             <img src="./img2.png" alt="image">
         </div>
@@ -113,14 +116,19 @@
     <script src="./app.js"></script>
     <script>
         document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            if (anchor.getAttribute('href') !== '#') {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (this.getAttribute('href') === '#home') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
                     document.querySelector(this.getAttribute('href')).scrollIntoView({
                         behavior: 'smooth'
                     });
-                });
-            }
+                }
+            });
         });
     </script>
 </body>
